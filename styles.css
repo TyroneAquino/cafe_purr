@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --logo-font: "Pacifico", cursive;
+    --nav-font: "Amatic SC", sans-serif;
+    --main-font: "Nunito", sans-serif;
+    --sub-font: "Quicksand", sans-serif;
+    
+    --body-color1: #6F4E37;
+    --body-color2: #F5E6DA;
+    --sub-color1: #D3B8AE;
+    --sub-color2: #FFE6CC;
+    --sub-color3: #A8C3A5;
+    --button-color: #E7A6B1;
+    --font-color1: #3E3E3E;
+    --font-color2: #4B3F35;
+    --font-color3: #FFFFF0;
+}

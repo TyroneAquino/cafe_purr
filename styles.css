@@ -1053,4 +1053,9 @@ input[type="submit"] {
         margin:0 auto;
         font-size: 30px;
     }
+	  
+    footer .social-links img{
+        width: 40px;
+    }
+
 }

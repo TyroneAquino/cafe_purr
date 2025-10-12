@@ -417,7 +417,7 @@ footer p{
 fieldset {
     border: none;
     padding: 1rem;
-    width: 90%;
+    width: 70%;
     max-width: 700px;
     margin: 1rem auto;
     font-family: var(--sub-font);
@@ -449,7 +449,7 @@ fieldset {
 .form-group {
     display: flex;
     flex-direction: column;
-    width: 45%; 
+    width:30%; 
     min-width: 150px; 
     margin:1rem auto;
 }
@@ -587,4 +587,470 @@ input[type="submit"] {
 .container p.bold{
     font-weight: bold;
     margin-bottom: 2rem;
+}
+
+/*================================================================================================*/
+/* MEDIA QUERY FOR TABLET VIEWPORT*/
+/* Tablet Viewport: Show tablet-desktop class, hide mobile class*/
+@media screen and (min-width:630px), print{
+	.tablet-desktop{display: block;}
+	
+	.mobile{display: none;}
+
+/* Tablet Viewport: Style rule for header*/
+	header{
+		position: static;
+        padding-bottom: .25em;
+	}
+
+/* Tablet Viewport: Style rule for nav area*/
+	nav ul{
+        margin:1em auto 1em;
+    }
+
+    nav ul li{
+		border-top: none;
+		display: inline-block;
+		border-right:1px solid var(--font-color3);
+	}
+	
+	nav li:last-child{border-right:none;}
+	
+	nav li a{
+        padding:0.1em 0 0;
+        font-size: 1.25em;
+        margin:0 .75em;
+    }
+	
+	nav li a:hover{
+		color:var(--body-color1);
+		background-color:var(--font-color3);
+	}
+
+/* Tablet Viewport: Style rule for homenav area*/
+    .home-nav{
+        width:90%;
+    }
+
+    .visit-us, .order-now {
+        display: grid;
+        grid-template-areas: "nav-image caption";
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin: 2rem auto;
+    }
+
+    .visit-us .nav-image, .order-now .nav-image {
+        grid-area: nav-image;
+        height: 100%;
+    }
+
+    .visit-us .nav-image img, .order-now .nav-image img  {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .visit-us .caption, .order-now .caption {
+        grid-area: caption;
+        background-color: var(--sub-color3);
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        align-items: center;  
+        padding: 2rem; 
+    }
+
+    .visit-us .caption p, .order-now .caption p  {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color:var(--font-color3);
+    }
+
+    .visit-us .caption .buttons, .order-now .caption .buttons {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: var(--button-color);
+        color: var(--font-color1);
+        text-decoration: none;
+        border-radius: 25px;
+        width:100%;
+        padding: .75rem;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+    }
+
+    .our-menu, .furry-companions {
+        display: grid;
+        grid-template-areas: "caption nav-image";
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        max-width: 1000px;
+        margin: 2rem auto;
+    }
+
+    .our-menu .nav-image, .furry-companions .nav-image {
+        grid-area: nav-image;
+        height: 100%;
+    }
+
+    .our-menu .nav-image img, .furry-companions .nav-image img  {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .our-menu .caption, .furry-companions .caption {
+        grid-area: caption;
+        background-color: var(--sub-color2);
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        align-items: center;  
+        padding: 2rem; 
+    }
+
+    .our-menu .caption p, .furry-companions .caption p  {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color:var(--font-color1);
+        width:75%;
+    }
+
+    .our-menu .caption .buttons, .furry-companions .caption .buttons {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: var(--sub-color1);
+        color: var(--font-color3);
+        text-decoration: none;
+        border-radius: 25px;
+        width:100%;
+        padding: .75rem;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+    }
+
+/* Tablet Viewport: Style rule for menu*/
+    .menu{
+        width:95%;
+        margin: 1rem auto;
+        padding: 1.5rem;
+    }
+
+    .menu h1{
+        font-size: 3rem;
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "coffee coffee noncoffee"
+            "coffee coffee juice"
+            "specials specials pastries";
+        gap: 1px;
+        margin: 1px auto;
+        max-width: 1000px;
+    }
+
+    .coffee-menu {
+        grid-area: coffee;
+        margin:0;
+        padding:1rem;
+    }
+
+    .coffee-menu table {
+        height:80%;
+        font-size:2.5rem;
+        padding:1rem auto;
+    }
+
+    .coffee-menu h2 {
+        font-size:3rem;
+        margin:0 auto 0;
+        padding:0;
+        text-align: left;
+    }
+
+    .coffee-menu p {
+        font-size:2.5rem;
+        margin:0 auto 0;
+        padding:1rem auto;
+        text-align: left;
+    }
+
+    .specials-menu {
+        grid-area: specials;
+        padding:1rem;
+        margin:0;
+    }
+
+    .specials-menu table {
+        height:70%;
+        font-size:2.5rem;
+        padding:1rem auto;
+    }
+
+    .specials-menu h2 {
+        font-size:3rem;
+        margin:0 auto 0;
+        padding:0 1rem auto;
+        text-align: left;
+    }
+
+    .noncoffee-menu {
+        grid-area: noncoffee;
+        padding:.5rem;
+        margin:0;
+    }
+
+    .noncoffee-menu h2 {
+        font-size:1.5rem;
+        margin:0 auto 0;
+        padding:0 .5rem 1rem;
+        text-align: left;
+    }
+
+    .noncoffee-menu table {
+        font-size:1.5rem;
+        padding:1rem auto;
+        height:70%;
+    }
+
+    .noncoffee-menu p {
+        font-size:1rem;
+        margin:0;
+        padding:0;
+        text-align: left;
+    }
+
+    .juice-menu {
+        grid-area: juice;
+        padding:.5rem;
+        margin:0;
+    }
+
+    .juice-menu table {
+        font-size:1.5rem;
+        padding:1rem auto;
+        height:70%;
+    }
+
+    .juice-menu p {
+        font-size:1rem;
+        margin:1rem 0 0;
+        padding:0;
+        text-align: left;
+    }
+
+    .juice-menu h2 {
+        font-size:1.5rem;
+        margin:0 auto 0;
+        padding:0 .5rem 1rem;
+        text-align: left;
+    }
+
+    .pastries-menu {
+        grid-area: pastries;
+        padding:.5rem;
+        margin:0;
+    }
+
+    .pastries-menu table {
+        font-size:1.25rem;
+        padding:1rem auto;
+        height:80%;
+    }
+
+    .pastries-menu h2 {
+        font-size:1.5rem;
+        margin:0 auto 0;
+        padding:0 .5rem 1rem;
+        text-align: left;
+    }
+
+    .pastries-menu table {
+        font-size:1.5rem;
+        padding:1rem auto;
+        height:80%;
+    }
+
+    /* Tablet Viewport: Style rule for order button*/
+    #order-button{
+        width:30%;
+        font-size:1.5rem;
+    }
+
+    /* Tablet Viewport: Style rule for cat gallery*/
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "cat1 cat2"
+            "cat3 cat4"
+            "cat5 cat6"
+            "cat7 cat8";
+        margin: 1rem auto;
+        padding:1px auto;
+        width:90%;
+        gap:20px;
+    }
+
+    .cat-gallery .cat{
+        margin:0 auto;
+    }
+    .cat-gallery h1, .potw h1{
+        font-size: 2.5rem;
+        margin:0 auto 1rem;
+    }
+
+    .potw{
+        width:80%;
+    }
+
+    .potw .weekly-gallery{
+        width:65%;
+        font-size: 1.5rem;
+    }
+
+    .potw .weekly-gallery img{
+        width:99%;
+    }
+
+    input[type="submit"] {
+        width:45%;
+    }
+
+    /* Tablet Viewport: Style rule for about page*/
+    .about-cafe{
+        width:100%;
+        margin:1rem auto 1rem;
+    }
+
+    .about-cafe h1{
+        font-weight: bold;
+        color:var(--font-color2);
+        margin:1rem auto;
+    }
+
+    .about-cafe p{
+        width:100%;
+        margin:1rem auto;
+        font-size: 1.25rem;
+        color: var(--font-color1);
+    }
+
+    .vision-mission{
+        height:auto;
+        margin:.5rem auto .5rem;
+        background-color: var(--sub-color1);
+        border-radius: 25px;
+        padding:.5rem 0;
+        width: 95%;
+    }
+
+     .vision-mission .mission, .vision-mission .vision{
+        background-color: var(--sub-color2);
+        width:95%;
+        margin:1rem auto 1rem;
+        padding:0.1rem 1rem 0.1rem;
+        border-radius: 25px;
+        height: auto;
+     }
+
+     .vision-mission h2{
+        margin:auto;
+        color: var(--font-color2);
+        padding:.5rem;
+     }
+
+     .vision-mission p{
+        font-size:1.25rem;
+        margin-top: 0;
+        width:100%;
+     }
+
+     /* Tablet Viewport: Style rule for articles*/
+     .articles{
+        width:70%;
+        margin:2rem auto;
+        text-align: center;
+     }
+
+     .articles iframe, .articles img{
+        height:332px;
+     }
+
+     .articles p{
+        text-align: center;
+        font-size: 1.25rem;
+     }
+
+     .articles h2{
+        text-align: center;
+        font-size: 1.5rem;
+     }
+
+     /* Tablet Viewport: Style rule for visiting guidelins*/
+
+     .visiting-guideline{
+        background-color: var(--sub-color1);
+        padding:0.5rem;
+        margin:1rem auto;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+     }
+
+     .visiting-guideline h1{
+        font-size: 2rem;
+        margin:0 auto 1rem;
+     }
+
+     .visiting-guideline ol li{
+        font-size: 22px;
+     }
+
+     /* Tablet Viewport: Style rule for about*/
+     .container{
+        width:50%;
+        margin:2rem auto;
+     }
+
+     .container p{
+        font-size: 22px;
+        width: 100%;
+     }
+
+     .container h1{
+        font-size: 36px;
+        margin-bottom: 0;
+     }
+
+     .container h3{
+        font-size: 24px;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+     }
+
+     .container iframe{
+        height:289px;
+     }
+
+     .container .email-contact{
+        background-color: var(--button-color);
+        width:100%;
+        margin:0 auto 1rem;
+        padding: 0.5rem;
+     }
+
+     .container .email-contact p:first-child{
+        margin:0 auto;
+    }
+
+    .email-contact p:nth-child(2){
+        font-weight:bold;
+        margin:0 auto;
+        font-size: 30px;
+    }
 }

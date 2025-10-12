@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="cat">
-                    <img src="img/cat3.jpg" alt="black cat">
+                    <img src="img/cat3.jpeg" alt="black cat">
                     <h3>Pepper</h3>
                     <p>The guardian of the cafe, always on patrol.</p>
                 </div>
@@ -99,12 +99,24 @@
                 <div class="submission-form">
                     <form>
                         <fieldset>
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name">
-                            <label for="picture">Enter file:</label>
-                            <input type="file" id="picture" name="picture">
-                            <label for="caption">Enter caption:</label>
-                            <input type="text" id="caption" name="caption">
+                            <div class="form-row">
+                                <div class="form-group-inline">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="picture">Enter file:</label>
+                                    <input type="file" id="picture" name="picture">
+                                </div>
+                                <div class="form-group">
+                                    <label for="caption">Enter caption:</label>
+                                    <input type="text" id="caption" name="caption">
+                                </div>
+                            </div>
+
                             <input type="submit" value="Submit">
                         </fieldset>
                     </form>

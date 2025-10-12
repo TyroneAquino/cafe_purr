@@ -1,15 +1,20 @@
-* {
+/* css styles for cafe purr */
+
+/* CSS Reset */
+body, header, nav,ul,li, main, footer, h1, div, img, figure, figcaption, section, article, aside, table, figcaption {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
+/* CSS variables */
 :root{
     --logo-font: "Pacifico", cursive;
     --nav-font: "Amatic SC", sans-serif;
-    --main-font: "Nunito", sans-serif;
-    --sub-font: "Quicksand", sans-serif;
-    
+    --sub-font: "Nunito", sans-serif;
+    --main-font: "Quicksand", sans-serif;
+
     --body-color1: #6F4E37;
     --body-color2: #F5E6DA;
     --sub-color1: #D3B8AE;
@@ -19,4 +24,512 @@
     --font-color1: #3E3E3E;
     --font-color2: #4B3F35;
     --font-color3: #FFFFF0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*===================================*/
+/*Style rules for mobile viewports*/
+.mobile{display: block;}
+
+.tablet-desktop{display: none;}
+
+body{
+    background-color: var(--body-color2);
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Style rules for header*/
+header{
+    background-color: var(--body-color1);
+    padding: 0;
+    width:100%;
+}
+
+header img{width:110px;}
+
+header .logo a{
+    text-decoration: none;
+    color: var(--sub-color1);
+    font-family: var(--logo-font);
+    font-size: 2rem;
+    display:inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/*Style rules for nav*/
+nav{
+	padding: 0;
+	margin-bottom: 0;
+    width:100%;
+}
+
+nav ul{
+    list-style: none;
+    margin:2rem auto;
+    width:100%;
+}
+
+nav ul li{
+    border-top: 1px solid var(--font-color3);
+    padding: .5rem;
+    margin:0;
+    font-size:1.5rem;
+}
+
+nav ul li:first-child{border-top: none;}
+
+nav a{
+    color:var(--font-color3);
+    font-family: var(--nav-font);
+    text-decoration: none;
+    display:block;
+}
+
+main{font-family: var(--main-font);}
+
+/*Style rules for body*/
+main p{
+    color: var(--font-color1);
+    font-size:1rem;
+    margin:1rem auto;
+    width:95%;
+    max-width:700px;
+}
+
+main h3{
+    color: var(--font-color2);
+} 
+
+/*Style rules for home navigation*/
+.home-nav{margin:2rem auto;}
+
+.home-nav figure{
+    margin: 1rem 1rem;
+    position: relative;
+    overflow: hidden;
+    width:95%;
+}
+
+.home-nav img{
+    max-height: 274px;
+    height:274px;
+    object-fit: cover;
+    display: block;
+    width:95%;
+}
+
+.home-nav figcaption{
+    font-family: var(--sub-font);
+    font-size: 4rem;
+    color:var(--font-color3);
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.home-nav figcaption.smaller-text{
+    font-size: 2.7rem;
+}
+
+.home-nav a{text-decoration: none;}
+
+/*Style rules for footer*/
+
+footer{
+    background-color: var(--body-color1);
+    padding:1rem 0;
+    text-align: center;
+    color: var(--font-color3);
+    font-family: var(--sub-font);
+    width:100%;
+    height:auto;
+}
+
+footer .social-links{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    margin-bottom: 1rem;
+}
+
+footer .social-links img{
+    width:30px;
+    margin:0 5px;
+    border: 1px solid #000;
+    border-radius:35px;
+}
+
+footer p{
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: var(--sub-font);
+    font-weight: normal;
+}
+
+/*style rules for menu*/
+
+.menu h1{
+    color: var(--font-color3);
+}
+
+.menu{
+    background-color: var(--sub-color1);
+    border-radius: 25px;
+    width:90%;
+    height: auto;
+    margin:1rem auto;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.menu .coffee-menu, .menu .juice-menu, .menu .specials-menu{
+    background-color: var(--sub-color2);
+    width: 95%;
+    margin: 1rem auto;
+    color: var(--font-color1);
+}
+
+.menu .noncoffee-menu, .menu .noncoffee-menu p, .menu .pastries-menu{
+    background-color: var(--sub-color3);
+    width: 95%;
+    margin:1rem auto;
+    color:var(--font-color3);
+}
+
+.menu h2{
+    font-family: var(--sub-font);
+    text-decoration: underline;
+    padding-top:1rem;
+}
+
+.menu table{
+    width: 100%;
+    font-size: 1.5rem;
+    padding:0;
+    margin:auto;
+}
+
+.menu table th, .menu table td, .menu p{
+    font-family: var(--nav-font);
+}
+
+.menu table td:first-child, .menu p{
+    text-align: left;
+}
+
+.menu p{padding-bottom: 1rem;}
+
+.menu h1, .menu h2{text-transform: uppercase;}
+
+/*style rules for order-button*/
+
+#order-button{
+    margin:2rem auto;
+    padding:1rem;
+    background-color: var(--button-color);
+    width: 50%;
+    border-radius: 25px;
+}
+
+#order-button a{
+    text-decoration: none;
+    font-family: var(--sub-font);
+    text-transform: uppercase;
+    color:var(--font-color1);
+}
+
+/*style rules for cat gallery*/
+.cat-gallery{
+    background-color: var(--sub-color1);
+    border-radius: 25px;
+    width:80%;
+    height: auto;
+    margin:1rem auto;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.cat-gallery h1{
+    color: var(--font-color3);
+    text-transform: uppercase;
+}
+
+.cat-gallery .cat{
+    border-radius: 25px;
+    background-color: var(--sub-color2);
+    padding:1rem;
+    margin:1rem auto;
+    font-family: var(--sub-font);
+}
+
+.cat-gallery .cat img{
+    width:95%;
+    margin:auto;
+    border-radius: 25px;
+    height:247px;
+    object-fit: cover;
+}
+
+.cat-gallery .cat h3{
+    font-size: 32px;
+    margin: 0.5rem 0 0.25rem;
+    padding: 0;
+    font-weight: bold;
+}
+
+.cat-gallery .cat p{
+    padding: 0;
+    width:100%;
+    margin:0.25rem 0 0.25rem;
+    font-size:18px;
+    font-weight: normal;
+}
+
+/*style rules for photo of the week gallery*/
+.potw{
+    width:95%;
+    margin:1rem auto;
+    background-color: var(--sub-color1);
+    font-family: var(--sub-font);
+    border-radius: 25px;
+    height:auto;
+    padding: 1rem;
+}
+
+.potw h1{
+    color:  var(--font-color1);
+    font-size: 32px;
+}
+
+.weekly-gallery{
+    background-color: var(--sub-color2);
+    border-radius: 25px;
+    margin:1rem auto;
+    padding: 0.5rem auto 1rem;
+}
+
+.weekly-gallery img{
+    width:95%;
+    margin: auto;
+    padding:1rem;
+    border-radius: 25px;
+    height:283px;
+}
+
+.weekly-gallery figcaption{
+    font-style: italic;
+    margin:0 auto;
+    color:var(--font-color1);
+    padding:0;
+}
+
+.weekly-gallery p{
+    font-style: italic;
+    margin:0 auto;
+    text-align: right;
+    padding:1rem;
+}
+
+.potw h2{
+    color:  var(--font-color1);
+    font-size: 24px;
+    padding:0;
+    margin:0;
+}
+
+/*style rules for submission form*/
+.submission-form{
+    background-color: var(--sub-color3);
+    border-radius: 25px;
+    margin:1rem auto;
+}
+
+fieldset {
+    border: none;
+    padding: 1rem;
+    width: 90%;
+    max-width: 700px;
+    margin: 1rem auto;
+    font-family: var(--sub-font);
+    color:var(--font-color1);
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: auto;
+    margin:1rem auto;
+}
+
+.form-group-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.form-group-inline label {
+    white-space: nowrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 45%; 
+    min-width: 150px; 
+    margin:1rem auto;
+}
+
+
+
+input[type="text"],
+input[type="file"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--font-color1);
+    border-radius: 25px;
+    margin: auto;
+    width:50%;
+    height:50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*style rules for articles*/
+.articles{
+    width:95%;
+    margin:auto;
+}
+.articles p{
+    font-family: var(--main-font);
+    color: var(--font-color1);
+    text-align: left;
+    width: 99%;
+    margin: 0.5rem auto 1rem;
+}
+
+.articles img, .articles iframe{
+    height: 250px;
+    margin:auto;
+    width:100%;
+    object-fit: cover;
+}
+
+.articles h2{
+    text-align: left;
+    color:var(--font-color2);
+    margin:1rem auto 0;
+}
+
+/*style rules for visiting guideline section*/
+.visiting-guideline{
+    width:90%;
+    margin:auto;
+    border-top:1px solid var(--font-color2);
+}
+
+.visiting-guideline h1{
+    width:50%;
+    text-align: center;
+    margin:1rem auto;
+    color:var(--font-color2);
+    font-size: 24px;
+}
+
+
+.visiting-guideline ol{
+    color:var(--font-color1);
+    width:95%;
+    margin:0 auto 2rem;
+    padding-left: 1.5rem;
+}
+
+.visiting-guideline li{
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+}
+
+/*style rules for visit us page*/
+.container{
+    width:95%;
+    margin:0 auto 0;
+    padding:0 0 1rem;
+}
+
+.container iframe{
+    width:100%;
+    border:1px solid #000;
+    margin: 1rem auto 1rem;
+}
+
+.container p{
+    width:70%;
+    margin:1rem auto 0.5rem;
+    color:var(--font-color1);
+}
+
+.container h1{
+    color:var(--font-color1);
+    margin:auto;
+}
+
+.container h3{
+    color:var(--font-color1);
+    margin:auto;
+}
+
+.mobile-contact{
+    background-color: var(--button-color);
+    width:80%;
+    margin:0 auto 1rem;
+    padding: 0.5rem;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.mobile-contact p:first-child{
+    margin:0 auto;
+}
+
+.mobile-contact p:nth-child(2){
+    font-weight:bold;
+    margin:0 auto;
+    font-size: 20px;
+}
+
+.container p.bold{
+    font-weight: bold;
+    margin-bottom: 2rem;
 }

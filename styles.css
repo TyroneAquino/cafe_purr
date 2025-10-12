@@ -54,16 +54,31 @@ header{
     width:100%;
 }
 
-header img{width:110px;}
+header .logo {
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+}
 
-header .logo a{
-    text-decoration: none;
+header .logo img {
+    display: block;
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    color: #D3B8AE;
+}
+
+header .logo span {
+    position: absolute;
+    bottom: -1rem; /* distance from bottom of image */
+    left: 50%;
+    transform: translateX(-50%);
     color: var(--sub-color1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-size: 2.5rem;
     font-family: var(--logo-font);
-    font-size: 2rem;
-    display:inline-flex;
-    align-items: center;
-    gap: 10px;
+    white-space: nowrap;
 }
 
 /*Style rules for nav*/
@@ -142,9 +157,49 @@ main h3{
 
 .home-nav figcaption.smaller-text{
     font-size: 2.7rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .home-nav a{text-decoration: none;}
+
+/*Style rules for logo w/ tag*/
+
+main .logo {
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+    padding:0rem;
+    margin: 0 auto 4rem;
+}
+
+main .logo img {
+    display: block;
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+main .logo span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--body-color1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-family: var(--logo-font);
+    white-space: nowrap;
+}
+
+main .logo span:first-of-type {
+    bottom: -2rem;
+    font-size: 2.5rem;
+}
+
+main .logo span:last-of-type{
+    bottom: -3rem;
+    font-size: 1rem;
+}
 
 /*Style rules for footer*/
 

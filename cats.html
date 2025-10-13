@@ -6,6 +6,10 @@
         <title>Cafe Purr</title>
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="img/favicon/favicon.ico">
+        <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png">
+        <link rel="apple-touch-icon" size="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" href="img/favicon/android-chrome-192x192.png">
     </head>
     <body>
 
@@ -95,27 +99,23 @@
                 <h2>Submit Yours!</h2>
 
                 <div class="submission-form">
-                    <form>
+                    <form action="/submit_data.php" method="post">
                         <fieldset>
-                            <div class="form-row">
-                                <div class="form-group-inline">
-                                    <label for="name">Name:</label>
-                                    <input type="text" id="name" name="name">
-                                </div>
+                            <div class="form-name">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name">
                             </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="picture">Enter file:</label>
-                                    <input type="file" id="picture" name="picture">
-                                </div>
-                                <div class="form-group">
-                                    <label for="caption">Enter caption:</label>
-                                    <input type="text" id="caption" name="caption">
-                                </div>
+                            <div class="form-picture">    
+                                <label for="picture">Enter file:</label>
+                                <input type="file" id="picture" name="picture">
                             </div>
-
-                            <input type="submit" value="Submit">
+                            <div class="form-caption">
+                                <label for="caption">Enter caption:</label>
+                                <input type="text" id="caption" name="caption">
+                            </div>
+                            <div class="submit">
+                                <input type="submit" value="Submit">
+                            </div>
                         </fieldset>
                     </form>
                 </div>

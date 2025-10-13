@@ -1,4 +1,4 @@
-/* css styles for cafe purr */
+/* css styles for cafe purr max*/
 
 /* CSS Reset */
 body, header, nav,ul,li, main, footer, h1, div, img, figure, figcaption, section, article, aside, table, figcaption {
@@ -26,9 +26,7 @@ body, header, nav,ul,li, main, footer, h1, div, img, figure, figcaption, section
     --font-color3: #FFFFF0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html {scroll-behavior: smooth;}
 
 /*===================================*/
 /*Style rules for mobile viewports*/
@@ -118,12 +116,9 @@ main p{
     font-size:1rem;
     margin:1rem auto;
     width:95%;
-    max-width:700px;
 }
 
-main h3{
-    color: var(--font-color2);
-} 
+main h3{color: var(--font-color2);} 
 
 /*Style rules for home navigation*/
 .home-nav{margin:2rem auto;}
@@ -238,9 +233,7 @@ footer p{
 
 /*style rules for menu*/
 
-.menu h1{
-    color: var(--font-color3);
-}
+.menu h1{color: var(--font-color3);}
 
 .menu{
     background-color: var(--sub-color1);
@@ -279,13 +272,9 @@ footer p{
     margin:auto;
 }
 
-.menu table th, .menu table td, .menu p{
-    font-family: var(--nav-font);
-}
+.menu table th, .menu table td, .menu p{font-family: var(--nav-font);}
 
-.menu table td:first-child, .menu p{
-    text-align: left;
-}
+.menu table td:first-child, .menu p{text-align: left;}
 
 .menu p{padding-bottom: 1rem;}
 
@@ -330,6 +319,7 @@ footer p{
     padding:1rem;
     margin:1rem auto;
     font-family: var(--sub-font);
+    width:100%;
 }
 
 .cat-gallery .cat img{
@@ -375,7 +365,7 @@ footer p{
     background-color: var(--sub-color2);
     border-radius: 25px;
     margin:1rem auto;
-    padding: 0.5rem auto 1rem;
+    padding: 0.5rem 0 1rem;
 }
 
 .weekly-gallery img{
@@ -416,52 +406,50 @@ footer p{
 
 fieldset {
     border: none;
-    padding: 1rem;
-    width: 70%;
-    max-width: 700px;
+    width: 100%;
+    padding:1rem 0;
     margin: 1rem auto;
     font-family: var(--sub-font);
     color:var(--font-color1);
     text-align: center;
-}
-
-.form-row {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    overflow-x: auto;
-    margin:1rem auto;
-}
-
-.form-group-inline {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "form-name form-name"
+        "form-picture form-caption"
+        "submit submit";
+    gap:20px;
     align-items: center;
-    gap: 0.5rem;
-    flex: 1;
+    justify-items: center;
 }
 
-.form-group-inline label {
-    white-space: nowrap;
+.form-name{grid-area: form-name; width:100% ;}
+
+.form-picture{grid-area: form-picture; width:100%;}
+
+.form-caption{grid-area: form-caption; width:100%;}
+
+.submit{grid-area: submit;}
+
+.form-name label, .form-picture label, .form-caption label {white-space: nowrap;}
+
+.form-name input[type="text"]{
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 73%;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    width:30%; 
-    min-width: 150px; 
-    margin:1rem auto;
-}
-
-
-
-input[type="text"],
-input[type="file"] {
+.form-caption input[type="text"] {
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 5px;
-    width: 100%;
+    width: 80%;
+}
+
+.form-picture input[type="file"]{
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 70%;
 }
 
 input[type="submit"] {
@@ -472,7 +460,7 @@ input[type="submit"] {
     color: var(--font-color1);
     border-radius: 25px;
     margin: auto;
-    width:50%;
+    width:120%;
     height:50px;
     text-transform: uppercase;
     font-weight: bold;
@@ -570,13 +558,9 @@ input[type="submit"] {
     padding: 0.5rem;
 }
 
-.container a{
-    text-decoration: none;
-}
+.container a{text-decoration: none;}
 
-.mobile-contact p:first-child{
-    margin:0 auto;
-}
+.mobile-contact p:first-child{margin:0 auto;}
 
 .mobile-contact p:nth-child(2){
     font-weight:bold;
@@ -669,7 +653,6 @@ input[type="submit"] {
 
     .visit-us .caption .buttons, .order-now .caption .buttons {
         display: inline-block;
-        padding: 0.5rem 1rem;
         background-color: var(--button-color);
         color: var(--font-color1);
         text-decoration: none;
@@ -685,7 +668,6 @@ input[type="submit"] {
         grid-template-areas: "caption nav-image";
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        max-width: 1000px;
         margin: 2rem auto;
     }
 
@@ -719,7 +701,6 @@ input[type="submit"] {
 
     .our-menu .caption .buttons, .furry-companions .caption .buttons {
         display: inline-block;
-        padding: 0.5rem 1rem;
         background-color: var(--sub-color1);
         color: var(--font-color3);
         text-decoration: none;
@@ -750,7 +731,6 @@ input[type="submit"] {
             "specials specials pastries";
         gap: 1px;
         margin: 1px auto;
-        max-width: 1000px;
     }
 
     .coffee-menu {
@@ -762,7 +742,7 @@ input[type="submit"] {
     .coffee-menu table {
         height:80%;
         font-size:2.5rem;
-        padding:1rem auto;
+        padding:1rem 0;
     }
 
     .coffee-menu h2 {
@@ -775,7 +755,7 @@ input[type="submit"] {
     .coffee-menu p {
         font-size:2.5rem;
         margin:0 auto 0;
-        padding:1rem auto;
+        padding:1rem;
         text-align: left;
     }
 
@@ -794,7 +774,7 @@ input[type="submit"] {
     .specials-menu h2 {
         font-size:3rem;
         margin:0 auto 0;
-        padding:0 1rem auto;
+        padding:0 1rem 1rem;
         text-align: left;
     }
 
@@ -813,12 +793,12 @@ input[type="submit"] {
 
     .noncoffee-menu table {
         font-size:1.5rem;
-        padding:1rem auto;
+        padding:1rem 0;
         height:70%;
     }
 
     .noncoffee-menu p {
-        font-size:1rem;
+        font-size:1.25rem;
         margin:0;
         padding:0;
         text-align: left;
@@ -832,12 +812,12 @@ input[type="submit"] {
 
     .juice-menu table {
         font-size:1.5rem;
-        padding:1rem auto;
+        padding:1rem 0;
         height:70%;
     }
 
     .juice-menu p {
-        font-size:1rem;
+        font-size:1.25rem;
         margin:1rem 0 0;
         padding:0;
         text-align: left;
@@ -858,7 +838,7 @@ input[type="submit"] {
 
     .pastries-menu table {
         font-size:1.25rem;
-        padding:1rem auto;
+        padding:1rem;
         height:80%;
     }
 
@@ -871,7 +851,7 @@ input[type="submit"] {
 
     .pastries-menu table {
         font-size:1.5rem;
-        padding:1rem auto;
+        padding:1rem 0;
         height:80%;
     }
 
@@ -892,7 +872,7 @@ input[type="submit"] {
             "cat5 cat6"
             "cat7 cat8";
         margin: 1rem auto;
-        padding:1px auto;
+        padding:1px 0;
         width:90%;
         gap:20px;
     }
@@ -914,13 +894,11 @@ input[type="submit"] {
         font-size: 1.5rem;
     }
 
-    .potw .weekly-gallery img{
-        width:99%;
-    }
+    .potw .weekly-gallery img{width:99%;}
 
-    input[type="submit"] {
-        width:45%;
-    }
+    fieldset{width:70%;}
+
+    input[type="submit"] {width:100%;}
 
     /* Tablet Viewport: Style rule for about page*/
     .about-cafe{
@@ -1007,9 +985,7 @@ input[type="submit"] {
         margin:0 auto 1rem;
      }
 
-     .visiting-guideline ol li{
-        font-size: 22px;
-     }
+     .visiting-guideline ol li{font-size: 22px;}
 
      /* Tablet Viewport: Style rule for about*/
      .container{
@@ -1053,9 +1029,314 @@ input[type="submit"] {
         margin:0 auto;
         font-size: 30px;
     }
-	  
-    footer .social-links img{
-        width: 40px;
+
+    footer .social-links img{width: 40px;}
+} 
+/*================================================================================================*/
+/* MEDIA QUERY FOR DESKTOP VIEWPORT*/
+@media screen and (min-width:1024px), print{
+/* Desktop Viewport: Style rule for header*/
+	header{
+		width:100%;
+		padding:1rem 0 0 5rem;
+        overflow:hidden;
+	}
+
+    header .logo{
+        float:left;
     }
 
+/* Desktop Viewport: Style rule for nav area*/
+	nav{
+		float: right;
+		width: 85%;
+		margin: 4em 0 0;
+	}
+	
+	nav ul{text-align: right;}
+	
+	nav ul li{
+        border:none;
+        font-size: 2rem;
+        padding: 0.5 1rem;
+        margin:0 0 1rem;
+    }
+	
+	nav li a:hover{
+		color: var(--body-color1);
+		background-color: var(--font-color3);
+	}
+
+    .intro{
+        width:100%;
+        padding:2rem 0;
+        margin:1rem auto;
+    }
+
+    .intro p{
+        font-size: 1.5rem;
+        text-align: left;
+        width: 90%;
+        display: block;
+    }
+
+    /* Desktop Viewport: Style rule for homenav area*/
+
+    .home-nav figure {
+        display: inline-block;
+        vertical-align: top;
+        width: 24%;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .visit-us img {
+        display: block;
+        width: 100%; 
+    }
+
+    .home-nav .caption {
+        text-align: center;
+        display: block;
+        height: 200px;
+    }
+
+    .caption p{
+        margin: 0 auto; 
+        display: block;
+        width:70%;
+    }
+
+    .caption a.buttons {
+        margin: 0 auto; 
+        display: block;
+        width:70%; 
+    }
+
+    /* Desktop Viewport: style rules for menu area*/
+
+    .menu-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "coffee coffee noncoffee noncoffee"
+            "juice juice pastries pastries"
+            ". specials specials .";
+        margin: 0 auto;
+        padding:2rem;
+        width:90%;
+        gap:20px;
+    }
+
+    .coffee-menu {
+        grid-area: coffee;
+        height:500px;
+    }
+
+    .menu h1{font-size: 4rem;}
+
+    .coffee-menu table{
+        height:20;
+        font-size: 2rem;
+    }
+
+    .coffee-menu p{
+        font-size: 1.5rem;
+        padding:0;
+    }
+
+    .noncoffee-menu {
+        grid-area: noncoffee;
+        height:500px;
+    }
+
+    .noncoffee-menu h2{
+        font-size: 3rem;
+        padding:0;
+    }
+
+    .noncoffee-menu table{font-size: 2rem;}
+
+    .noncoffee-menu p{font-size: 1.5rem;}
+
+    .juice-menu {
+        grid-area: juice;
+        height:500px;
+    }
+
+    .juice-menu h2{font-size: 3rem;}
+
+    .juice-menu table{
+        font-size: 2rem;
+        padding:0;
+    }
+
+    .juice-menu p{
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .pastries-menu {
+        grid-area: pastries;
+        height:500px;
+    }
+
+    .pastries-menu table{
+        height:85%;
+        font-size: 2rem;
+        padding-top: 0;
+    }
+
+    .pastries-menu h2{font-size: 3rem;}
+
+    .specials-menu {
+        grid-area: specials;
+        height:380px;
+    }
+
+    .specials-menu table{
+        height:75%;
+        font-size: 2rem;
+    }
+
+    /* Desktop Viewport: style rules for order*/
+
+    #order-button {
+        width: 20%;
+        height: 90px;
+        display: flex;
+        align-items: center;      
+        justify-content: center;  
+    }
+
+    /* Desktop Viewport: style rules for cat gallery*/
+
+    .cat-gallery{
+        width:90%;
+        margin-bottom: 2rem;
+    }
+
+    .cat-gallery h1{margin:1rem 0 2rem;}
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "cat1 cat2 cat3 cat4"
+            "cat5 cat6 cat7 cat8";
+        margin: 1rem auto;
+        padding:1px 0;
+        width:99%;
+        gap:10px;
+    }
+
+    /* Desktop Viewport: style rules for photo of the week gallery*/
+
+    .potw{
+        width:90%;
+        padding:0 0 1rem;
+    }
+
+    .potw h1{margin: 0;}
+
+    .potw .weekly-gallery{
+        width:30%;
+        margin-top: 0;
+    }
+
+    .potw h2{font-size: 2rem;}
+
+    .potw .submission-form{
+        width:90%;
+        padding:0;
+    }
+
+    input[type="submit"] {width: 200px;}
+
+    fieldset{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "form-name form-picture form-caption"
+            ". submit .";
+        margin: 1rem auto;
+        padding:1rem;
+        width:99%;
+        row-gap:20px;
+        column-gap: 0;
+    }
+
+    .form-caption input[type="text"] {width: 50%;}
+
+    .about-cafe{
+        text-align: left;
+        width:90%;
+        margin:3rem auto;
+    }
+
+    .about-cafe h1, .visiting-guideline h1{font-size: 3rem;}
+
+    .about-cafe p, .vision-mission p, .articles p, .visiting-guideline ol li{font-size: 1.5rem;}
+
+    .vision-mission{
+        width:90%;
+        display: grid;
+        grid-template-areas: "mission vision";
+        gap:20px;
+        padding:2rem;
+    }
+
+    .vision-mission h2, .articles h2{
+        font-size: 2rem;
+        margin:.5rem;
+    }
+
+    .articles{
+        width: 90%;
+        display: grid;
+        grid-template-areas: "article1 article2 article3";
+        gap:20px;
+    }
+
+    .visiting-guideline ol{
+        width:60%;
+        text-align: justify;
+    }
+
+    /* Desktop Viewport: style rules for about page*/
+    .container{margin-bottom: 0;}
+
+    .container iframe{
+        width: 450px;
+        height: 450px;
+    }
+
+    .container p:nth-of-type(2){width:35%;}
+
+    .container p{font-size: 1.5rem;}
+
+    .container h1{font-size: 3rem;}
+
+    .container h2{font-size: 2rem;}
+
+    .container .email-contact{
+        width: 50%;
+        padding-bottom: 1.5rem;
+    }
+
+    .container .email-contact p{width:100%;}
+
+    .container .email-contact p:first-of-type{font-size: 1.25rem;}
+
+    .container .email-contact p:nth-of-type(2){font-size: 2rem;}
+
+    .container p.bold{margin-top: 2rem;}
+
+    /* Desktop Viewport: style rules for footer*/
+
+    footer .social-links img{width: 50px;}
+
+    footer p{font-size: 16px;}
 }

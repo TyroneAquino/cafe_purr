@@ -1,7 +1,7 @@
 /* css styles for cafe purr max*/
 
 /* CSS Reset */
-body, header, nav,ul,li, main, footer, h1, div, img, figure, figcaption, section, article, aside, table, figcaption {
+body, header, nav,ul, main, footer, h1, div, img, figure, figcaption, section, article, aside, table, figcaption {
     margin: 0;
     padding: 0;
     border: 0;
@@ -48,7 +48,7 @@ img{
 /*Style rules for header*/
 header{
     background-color: var(--body-color1);
-    padding: 0;
+    padding:0;
     width:100%;
 }
 
@@ -56,6 +56,7 @@ header .logo {
     position: relative;
     width: fit-content;
     display: inline-block;
+    margin:1rem;
 }
 
 header .logo img {
@@ -68,7 +69,7 @@ header .logo img {
 
 header .logo span {
     position: absolute;
-    bottom: -1rem; /* distance from bottom of image */
+    bottom: -1rem;
     left: 50%;
     transform: translateX(-50%);
     color: var(--sub-color1);
@@ -573,6 +574,36 @@ input[type="submit"] {
     margin-bottom: 2rem;
 }
 
+/* hamburger menu for mobile viewport */
+a.icon, main .logo{display: none;}
+
+@media screen and (max-width:629px), print{
+  nav#myLinks {
+    display: block;
+  }
+
+  nav#myLinks.hide {
+    display: none;
+  }
+
+  a.icon {
+    background: var(--body-color1);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  a.icon i{
+    font-size:32px;
+    color:var(--sub-color1);
+  }
+
+  main .logo{display: block;}
+}
+
 /*================================================================================================*/
 /* MEDIA QUERY FOR TABLET VIEWPORT*/
 /* Tablet Viewport: Show tablet-desktop class, hide mobile class*/
@@ -588,9 +619,7 @@ input[type="submit"] {
 	}
 
 /* Tablet Viewport: Style rule for nav area*/
-	nav ul{
-        margin:1em auto 1em;
-    }
+	nav ul{margin:1em auto 1em;}
 
     nav ul li{
 		border-top: none;
@@ -612,9 +641,7 @@ input[type="submit"] {
 	}
 
 /* Tablet Viewport: Style rule for homenav area*/
-    .home-nav{
-        width:90%;
-    }
+    .home-nav{width:90%;}
 
     .visit-us, .order-now {
         display: grid;
@@ -718,9 +745,7 @@ input[type="submit"] {
         padding: 1.5rem;
     }
 
-    .menu h1{
-        font-size: 3rem;
-    }
+    .menu h1{font-size: 3rem;}
 
     .menu-grid {
         display: grid;
@@ -768,7 +793,7 @@ input[type="submit"] {
     .specials-menu table {
         height:70%;
         font-size:2.5rem;
-        padding:1rem auto;
+        padding:0;
     }
 
     .specials-menu h2 {
@@ -852,7 +877,7 @@ input[type="submit"] {
     .pastries-menu table {
         font-size:1.5rem;
         padding:1rem 0;
-        height:80%;
+        height:90%;
     }
 
     /* Tablet Viewport: Style rule for order button*/
@@ -877,17 +902,14 @@ input[type="submit"] {
         gap:20px;
     }
 
-    .cat-gallery .cat{
-        margin:0 auto;
-    }
+    .cat-gallery .cat{margin:0 auto;}
+
     .cat-gallery h1, .potw h1{
         font-size: 2.5rem;
         margin:0 auto 1rem;
     }
 
-    .potw{
-        width:80%;
-    }
+    .potw{width:80%;}
 
     .potw .weekly-gallery{
         width:65%;
@@ -956,9 +978,7 @@ input[type="submit"] {
         text-align: center;
      }
 
-     .articles iframe, .articles img{
-        height:332px;
-     }
+     .articles iframe, .articles img{height:332px;}
 
      .articles p{
         text-align: center;
@@ -1009,9 +1029,7 @@ input[type="submit"] {
         padding-bottom: 1rem;
      }
 
-     .container iframe{
-        height:289px;
-     }
+     .container iframe{height:289px;}
 
      .container .email-contact{
         background-color: var(--button-color);
@@ -1020,9 +1038,7 @@ input[type="submit"] {
         padding: 0.5rem;
      }
 
-     .container .email-contact p:first-child{
-        margin:0 auto;
-    }
+     .container .email-contact p:first-child{margin:0 auto;}
 
     .email-contact p:nth-child(2){
         font-weight:bold;
@@ -1042,14 +1058,12 @@ input[type="submit"] {
         overflow:hidden;
 	}
 
-    header .logo{
-        float:left;
-    }
+    header .logo{float:left;}
 
 /* Desktop Viewport: Style rule for nav area*/
 	nav{
 		float: right;
-		width: 85%;
+		width: 80%;
 		margin: 4em 0 0;
 	}
 	
@@ -1058,7 +1072,7 @@ input[type="submit"] {
 	nav ul li{
         border:none;
         font-size: 2rem;
-        padding: 0.5 1rem;
+        padding: 0.5rem 1rem;
         margin:0 0 1rem;
     }
 	
@@ -1137,7 +1151,6 @@ input[type="submit"] {
     .menu h1{font-size: 4rem;}
 
     .coffee-menu table{
-        height:20;
         font-size: 2rem;
     }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="img/favicon/favicon.ico">
         <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png">
-        <link rel="apple-touch-icon" size="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
         <link rel="icon" href="img/favicon/android-chrome-192x192.png">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
@@ -21,7 +23,7 @@
                 </a>
             </div>
 
-            <nav>
+            <nav id="myLinks">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
@@ -30,6 +32,9 @@
                     <li><a href="visit.html">Visit Us</a></li>
                 </ul>
             </nav>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars mobile"></i>
+            </a>
         </header>
 
         <main>
@@ -124,13 +129,12 @@
 
         <footer>
             <div class="social-links">
-                <img src="img/logo_fb.png">
-                <img src="img/logo_x.png">
-                <img src="img/logo_insta.png">
+                <a href="https://www.facebook.com/"><img src="img/logo_fb.png" alt="facebook logo"></a>
+                <a href="https://x.com/"><img src="img/logo_x.png" alt="x logo"></a>
+                <a href="https://www.instagram.com/"><img src="img/logo_insta.png" alt="instagram logo"></a>
             </div>
             <p>cafepurrcoffee.com</p>
             <p>&copy; 2025 Cafe Purr Coffee Company. All Rights Reserved</p>
         </footer>
-
     </body>
 </html>

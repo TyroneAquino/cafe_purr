@@ -1083,7 +1083,7 @@ a.icon, main .logo{display: none;}
 
     .intro{
         width:100%;
-        padding:2rem 0;
+        padding:0 0 2rem;
         margin:1rem auto;
     }
 
@@ -1319,7 +1319,7 @@ a.icon, main .logo{display: none;}
     }
 
     /* Desktop Viewport: style rules for about page*/
-    .container{margin-bottom: 0;}
+    .container{margin-bottom: 0; margin-top: 0;}
 
     .container iframe{
         width: 450px;
